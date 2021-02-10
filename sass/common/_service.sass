@@ -1,0 +1,36 @@
+.service
+	padding: rem(20px) 0
+
+
+	&__list
+		margin-top: rem(20px)
+		padding: 0
+		list-style: none
+		text-align: center
+
+		+phone
+			+grid(repeat(2, 1fr), $gap: rem(15px))
+
+		+tablet
+			grid-template-columns: repeat(3, 1fr)
+
+
+    &__item
+		margin-bottom: rem(50px)
+
+		+laptop
+			+flex($cross: flex-start)
+
+	&__title
+		+laptop
+			margin-top: 0
+
+	&__text
+		+laptop
+			margin-left: rem(20px)
+			text-align: left
+
+	&__desc
+		+laptop
+			text-align: justify
+

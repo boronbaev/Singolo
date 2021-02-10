@@ -1,0 +1,36 @@
+.portfolio
+    background: #2f3341
+    padding-bottom: 50px
+
+.portfolio__title
+    padding-top: 50px
+
+.btn
+    background: #2f3341
+    border: 1px solid #495170 
+    border-radius: 9%
+    margin-top: 5px
+    margin-left: 10px
+
+
+.portfolio__list
+    margin: 0
+    margin-top: 10px
+    padding: 0
+    list-style: none
+    display: grid
+    gap: .7rem
+
+    +phone
+        grid-template-columns: repeat(2, 1fr)
+
+    +tablet 
+        grid-template-columns: repeat(3, 1fr)
+
+    +desktop
+        grid-template-columns: repeat(4, 1fr)
+
+.portfolio__img
+    width: 100%
+    height: 35vh
+    object-fit: cover

@@ -1,0 +1,17 @@
+.slider
+	padding: rem(50px) 0
+	background: $secondColor
+	text-align: center
+
+	&__item
+		+tablet
+			+flex(space-between, center)
+
+	&__img
+		max-width: 100%
+
+		&:last-child
+			display: none
+
+			+tablet
+				display: inline

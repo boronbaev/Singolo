@@ -1,0 +1,67 @@
+.header
+	background: $mainColor
+	padding: rem(35px) 0
+
+	.container
+		+flex(space-between, center)
+
+.logo
+	font-size: rem(25px)
+	color: white
+	text-transform: uppercase
+	font-weight: 700
+
+.logo::after
+	content: '*'
+	color: $secondColor
+
+
+.nav
+	+pos-overlay(rgba(#000, .7))
+	+flex(center, center, $dir: column)
+	top: -100vh
+	height: 100vh
+	bottom: auto
+	transition: .5s
+
+	+tablet
+		position: static
+		background: unset
+		+flex($dir: row)
+		height: auto
+
+	&.is-active
+		top: 0
+
+
+	&__link
+		color: white
+		text-decoration: none
+		margin: rem(10px) 0
+		text-transform: uppercase
+
+		&--active
+			color: $secondColor
+
+		+tablet
+			position: relative
+			margin: 0 rem(15px)
+			&:last-child
+				margin-right: 0
+
+			&::before
+				content: ''
+				position: absolute
+				top: 50%
+				left: rem(-15px)
+				width: 2px
+				height: 2px
+				border-radius: 50%
+				background: rgba(#fff, .4)
+
+			&:first-child::before
+				display: none
+
+.hamburger
+	+tablet
+		display: none

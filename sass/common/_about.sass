@@ -1,0 +1,60 @@
+.about
+    background: #fff 
+
+.about__title
+    padding-top: 50px
+
+.about__list
+    margin: 0
+    padding: 0
+    list-style: none
+    display: grid
+    gap: .7rem
+    
+    +phone
+        grid-template-columns: repeat(2, 1fr)
+    +tablet 
+        grid-template-columns: repeat(3, 1fr)
+    
+
+.about__img
+    width: 100%
+    height: 45vh
+    object-fit: cover
+
+.about__icons
+    +flex($main: space-between)
+    margin-right: 155px
+     
+    +phone
+        margin-right: 70px
+
+    +tablet
+        margin-right: 100px
+
+    +laptop
+        margin-right: 150px
+
+    
+.icons__circle
+    border: 1px solid $textColor 
+    border-radius: 50% 
+    width: 30px
+    height: 30px
+    text-align: center
+    
+.fa-facebook-f
+    padding-top: 5px
+    color: $textColor
+
+.fa-google-plus-g
+    padding-top: 5px
+    color: $textColor
+
+.fa-twitter
+    padding-top: 5px
+    color: $textColor
+
+.fa-linkedin
+    padding-top: 5px
+    color: $textColor 
